@@ -17,7 +17,7 @@
 
 @implementation HKPuzzleViewFactory
 
-- (HKPuzzleView *)createViewWith:(PuzzleViewType)type frame:(CGRect)frame canEdit:(BOOL)canEdit{
++ (HKPuzzleView *)createViewWith:(PuzzleViewType)type frame:(CGRect)frame canEdit:(BOOL)canEdit{
     HKPuzzleView *view;
     switch (type) {
         case PuzzleViewType2Imgs: {

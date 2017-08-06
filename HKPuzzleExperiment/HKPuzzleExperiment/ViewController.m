@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "HKPuzzleViewFactory.h"
 
 #import "HKPuzzleControllerA.h"
 #import "HKPuzzleControllerB.h"

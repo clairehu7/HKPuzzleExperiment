@@ -12,7 +12,7 @@
 
 @interface HKParentController : UIViewController
 
-@property (nonatomic, strong) NSArray <UIViewController *>*vcs;
+- (void)loadWithVcs:(NSArray <UIViewController *>*)vcs childFrame:(CGRect)frame;
 
 - (void)turnInindex:(NSUInteger)index;
 @end
