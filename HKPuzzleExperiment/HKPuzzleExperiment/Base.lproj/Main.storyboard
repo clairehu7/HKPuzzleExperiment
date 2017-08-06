@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jl4-Ee-SmX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HKPuzzle-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dvp-n5-40r">
+                                <rect key="frame" x="137" y="217.5" width="100" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-iM-bYK">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="DJ6-up-zhX"/>
+                                            <constraint firstAttribute="width" constant="100" id="jK1-6R-7Ow"/>
+                                        </constraints>
+                                        <state key="normal" title="测试界面A"/>
+                                        <connections>
+                                            <action selector="aTUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnX-Fb-6UZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPf-Vu-gQV">
+                                        <rect key="frame" x="0.0" y="92" width="100" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="cZR-If-vRL"/>
+                                            <constraint firstAttribute="height" constant="80" id="qPk-Cf-wwC"/>
+                                        </constraints>
+                                        <state key="normal" title="测试界面 B"/>
+                                        <connections>
+                                            <action selector="bTUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvr-HO-V47"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aPf-Vu-gQV" secondAttribute="bottom" id="B5m-Oe-2To"/>
+                                    <constraint firstItem="JQW-iM-bYK" firstAttribute="centerX" secondItem="Dvp-n5-40r" secondAttribute="centerX" id="Bcc-mX-ouq"/>
+                                    <constraint firstItem="JQW-iM-bYK" firstAttribute="top" secondItem="Dvp-n5-40r" secondAttribute="top" id="Qnn-RF-81v"/>
+                                    <constraint firstAttribute="height" constant="172" id="XvD-dC-xm1"/>
+                                    <constraint firstItem="aPf-Vu-gQV" firstAttribute="centerX" secondItem="Dvp-n5-40r" secondAttribute="centerX" id="ft2-3e-qsO"/>
+                                    <constraint firstAttribute="width" constant="100" id="jID-8T-J85"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dvp-n5-40r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eFy-TF-IOm"/>
+                            <constraint firstItem="Dvp-n5-40r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="vcd-6F-hoM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="HKPuzzle" id="sAj-x2-ANy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1026" y="777"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pul-6a-NiO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jl4-Ee-SmX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pgz-0Q-OJg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ggh-pZ-W8W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksx-3C-KDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="776.76161919040487"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "HKPuzzleViewFactory.h"
+
+#import "HKPuzzleControllerA.h"
+#import "HKPuzzleControllerB.h"
 
 @interface ViewController ()
 
@@ -19,11 +23,19 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)aTUI:(UIButton *)sender {
+    HKPuzzleControllerA *vc = [HKPuzzleControllerA new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)bTUI:(UIButton *)sender {
+    HKPuzzleControllerB *vc = [HKPuzzleControllerB new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
