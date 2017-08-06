@@ -27,9 +27,12 @@ static NSUInteger pieceCount = 2;
 
 - (void)commonInit {
     _imgView0 = [UIImageView new];
+    _imgView0.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:_imgView0];
 
     _imgView1 = [UIImageView new];
+    _imgView1.backgroundColor = [UIColor lightGrayColor];
+
     [self addSubview:_imgView1];
 }
 
@@ -48,6 +51,8 @@ static NSUInteger pieceCount = 2;
     }
 
     self.photos = models.copy;
+
+    //TODO:更新 contentSize
 }
 
 - (void)loadPhotoFrameOf:(NSUInteger)code {

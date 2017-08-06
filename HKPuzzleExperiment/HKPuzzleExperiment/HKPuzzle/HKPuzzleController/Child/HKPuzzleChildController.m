@@ -25,7 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (instancetype)initWithContentFrame:(CGRect)frame type:(PuzzleViewType)type {
+- (instancetype)initWithType:(PuzzleViewType)type contentFrame:(CGRect)frame {
     self = [super init];
     if (self) {
         self.type = type;

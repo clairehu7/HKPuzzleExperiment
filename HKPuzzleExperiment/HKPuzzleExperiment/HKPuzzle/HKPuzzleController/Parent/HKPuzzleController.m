@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (CGRect)contentFrame {
+    CGRect frame = CGRectZero;
+    return frame;
+}
+
 @end

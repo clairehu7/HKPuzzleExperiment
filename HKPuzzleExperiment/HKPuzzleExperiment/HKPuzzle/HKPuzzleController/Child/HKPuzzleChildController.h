@@ -13,5 +13,5 @@
 #warning HKViewController
 
 @interface HKPuzzleChildController : UIViewController
-- (instancetype)initWithContentFrame:(CGRect)frame type:(PuzzleViewType)type;
+- (instancetype)initWithType:(PuzzleViewType)type contentFrame:(CGRect)frame;
 @end

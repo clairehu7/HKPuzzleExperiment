@@ -10,7 +10,7 @@
 
 #import "HKPuzzlePhoto.h"
 
-@interface HKPuzzleView : UIView
+@interface HKPuzzleView : UIScrollView
 
 @property (nonatomic, assign) BOOL canEdit;
 @property (nonatomic, strong, setter=updateWith:) NSArray <HKPuzzlePhoto *>*photos;

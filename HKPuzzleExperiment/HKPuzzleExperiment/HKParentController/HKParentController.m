@@ -115,8 +115,7 @@ static NSInteger baseChildVCTag = 100;
 
 - (void)resetChildVC:(UIViewController *)childViewController {
 
-    CGRect frame = self.contentView.frame;
-    frame.origin.y = 0;
+    CGRect frame = self.contentView.bounds;
     childViewController.view.frame = frame;
 }
 

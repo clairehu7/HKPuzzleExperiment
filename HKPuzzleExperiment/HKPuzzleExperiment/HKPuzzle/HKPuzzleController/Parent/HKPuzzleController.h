@@ -9,5 +9,5 @@
 #import "HKParentController.h"
 
 @interface HKPuzzleController : HKParentController
-
+- (CGRect)contentFrame;
 @end
