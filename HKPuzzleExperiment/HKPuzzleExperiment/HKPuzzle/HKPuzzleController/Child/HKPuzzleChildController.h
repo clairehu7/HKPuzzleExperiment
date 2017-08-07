@@ -10,8 +10,8 @@
 
 #import "HKPuzzleConfiger.h"
 
-#warning HKViewController
+#import "HKViewController.h"
 
-@interface HKPuzzleChildController : UIViewController
+@interface HKPuzzleChildController : HKViewController
 - (instancetype)initWithType:(PuzzleViewType)type contentFrame:(CGRect)frame;
 @end

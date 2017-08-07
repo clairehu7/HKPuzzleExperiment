@@ -6,11 +6,10 @@
 //  Copyright © 2017年 hky. All rights reserved.
 //
 
-#import <JSONModel/JSONModel.h>
+#import "HKBaseJSONModel.h"
 #import <UIKit/UIKit.h>
 
-#warning HKBaseJSONModel
-@interface HKPuzzlePhoto : JSONModel
+@interface HKPuzzlePhoto : HKBaseJSONModel
 
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, assign) NSUInteger code;

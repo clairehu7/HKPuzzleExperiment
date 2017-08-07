@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		02395F76A14F0329630B8DAB /* libPods-HKPuzzleExperiment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F408DA7BA5AEF5FEB1042B /* libPods-HKPuzzleExperiment.a */; };
+		7715859D1F3872EE00675324 /* UIView+HKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7715859C1F3872EE00675324 /* UIView+HKExtension.m */; };
+		771585A01F3872F700675324 /* UIColor+HKExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 7715859F1F3872F700675324 /* UIColor+HKExtends.m */; };
+		771585AE1F389BCC00675324 /* HKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771585AC1F389BCC00675324 /* HKViewController.m */; };
+		771585B21F389C6700675324 /* HKBaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 771585B11F389C6700675324 /* HKBaseJSONModel.m */; };
 		779D530B1F36999000E1AFF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D530A1F36999000E1AFF9 /* main.m */; };
 		779D530E1F36999000E1AFF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D530D1F36999000E1AFF9 /* AppDelegate.m */; };
 		779D53111F36999000E1AFF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D53101F36999000E1AFF9 /* ViewController.m */; };
@@ -51,6 +55,15 @@
 
 /* Begin PBXFileReference section */
 		623ECCD3AB2FBFD142426AED /* Pods-HKPuzzleExperiment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKPuzzleExperiment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HKPuzzleExperiment/Pods-HKPuzzleExperiment.debug.xcconfig"; sourceTree = "<group>"; };
+		7715859A1F38729300675324 /* HKMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKMarco.h; sourceTree = "<group>"; };
+		7715859B1F3872EE00675324 /* UIView+HKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HKExtension.h"; sourceTree = "<group>"; };
+		7715859C1F3872EE00675324 /* UIView+HKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HKExtension.m"; sourceTree = "<group>"; };
+		7715859E1F3872F700675324 /* UIColor+HKExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HKExtends.h"; sourceTree = "<group>"; };
+		7715859F1F3872F700675324 /* UIColor+HKExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HKExtends.m"; sourceTree = "<group>"; };
+		771585AB1F389BCC00675324 /* HKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKViewController.h; sourceTree = "<group>"; };
+		771585AC1F389BCC00675324 /* HKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKViewController.m; sourceTree = "<group>"; };
+		771585B01F389C6700675324 /* HKBaseJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKBaseJSONModel.h; sourceTree = "<group>"; };
+		771585B11F389C6700675324 /* HKBaseJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKBaseJSONModel.m; sourceTree = "<group>"; };
 		779D53061F36999000E1AFF9 /* HKPuzzleExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKPuzzleExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779D530A1F36999000E1AFF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		779D530C1F36999000E1AFF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +147,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		771585991F38728E00675324 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				771585AF1F389C6700675324 /* HKBaseJSONModel */,
+				771585A81F389BCC00675324 /* HKViewController */,
+				7715859A1F38729300675324 /* HKMarco.h */,
+				7715859B1F3872EE00675324 /* UIView+HKExtension.h */,
+				7715859C1F3872EE00675324 /* UIView+HKExtension.m */,
+				7715859E1F3872F700675324 /* UIColor+HKExtends.h */,
+				7715859F1F3872F700675324 /* UIColor+HKExtends.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		771585A81F389BCC00675324 /* HKViewController */ = {
+			isa = PBXGroup;
+			children = (
+				771585AB1F389BCC00675324 /* HKViewController.h */,
+				771585AC1F389BCC00675324 /* HKViewController.m */,
+			);
+			path = HKViewController;
+			sourceTree = "<group>";
+		};
+		771585AF1F389C6700675324 /* HKBaseJSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				771585B01F389C6700675324 /* HKBaseJSONModel.h */,
+				771585B11F389C6700675324 /* HKBaseJSONModel.m */,
+			);
+			path = HKBaseJSONModel;
+			sourceTree = "<group>";
+		};
 		779D52FD1F36999000E1AFF9 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +204,7 @@
 		779D53081F36999000E1AFF9 /* HKPuzzleExperiment */ = {
 			isa = PBXGroup;
 			children = (
+				771585991F38728E00675324 /* General */,
 				77B223341F36FBCA001A118A /* HKParentController */,
 				77B223101F369B5F001A118A /* HKPuzzle */,
 				779D530C1F36999000E1AFF9 /* AppDelegate.h */,
@@ -281,6 +327,10 @@
 		77B223751F374337001A118A /* PuzzleView */ = {
 			isa = PBXGroup;
 			children = (
+				77B223801F374337001A118A /* HKPuzzleView.h */,
+				77B223811F374337001A118A /* HKPuzzleView.m */,
+				77B223821F374337001A118A /* HKPuzzleViewFactory.h */,
+				77B223831F374337001A118A /* HKPuzzleViewFactory.m */,
 				77B223761F374337001A118A /* HKPuzzle2ImgsView.h */,
 				77B223771F374337001A118A /* HKPuzzle2ImgsView.m */,
 				77B223781F374337001A118A /* HKPuzzle4Imgs1View.h */,
@@ -291,10 +341,6 @@
 				77B2237D1F374337001A118A /* HKPuzzle6ImgsView.m */,
 				77B2237E1F374337001A118A /* HKPuzzle8ImgsView.h */,
 				77B2237F1F374337001A118A /* HKPuzzle8ImgsView.m */,
-				77B223801F374337001A118A /* HKPuzzleView.h */,
-				77B223811F374337001A118A /* HKPuzzleView.m */,
-				77B223821F374337001A118A /* HKPuzzleViewFactory.h */,
-				77B223831F374337001A118A /* HKPuzzleViewFactory.m */,
 			);
 			path = PuzzleView;
 			sourceTree = "<group>";
@@ -507,9 +553,13 @@
 				77B223861F374337001A118A /* HKPuzzle4Imgs2View.m in Sources */,
 				77B223841F374337001A118A /* HKPuzzle2ImgsView.m in Sources */,
 				77B223881F374337001A118A /* HKPuzzle8ImgsView.m in Sources */,
+				771585AE1F389BCC00675324 /* HKViewController.m in Sources */,
 				77B223711F37300C001A118A /* HKPuzzleChildController.m in Sources */,
 				77B223371F36FBE4001A118A /* HKParentController.m in Sources */,
 				77B2236D1F372FE3001A118A /* HKPuzzleControllerA.m in Sources */,
+				7715859D1F3872EE00675324 /* UIView+HKExtension.m in Sources */,
+				771585A01F3872F700675324 /* UIColor+HKExtends.m in Sources */,
+				771585B21F389C6700675324 /* HKBaseJSONModel.m in Sources */,
 				77B2236C1F372FE3001A118A /* HKPuzzleController.m in Sources */,
 				779D530B1F36999000E1AFF9 /* main.m in Sources */,
 			);

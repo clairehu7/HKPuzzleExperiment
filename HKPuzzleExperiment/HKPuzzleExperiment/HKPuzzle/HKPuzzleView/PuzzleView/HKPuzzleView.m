@@ -29,7 +29,7 @@
 
     //传入照片数与需要的照片数相等时直接赋值返回
     if (self.photos.count == photos.count) {
-        self.photos = photos;
+        [self updateWith:photos];
         return;
     }
 
@@ -43,7 +43,19 @@
         [models replaceObjectAtIndex:photo.code withObject:photo];
     }
 
-    self.photos = models.copy;
+    [self updateWith:models.copy];
+}
+
+- (void)photoTUI:(UIButton *)sender {
+
+    if (sender.tag >= self.photos.count) {
+        return;
+    }
+
+    if ([self.puzzleDelegate respondsToSelector:@selector(selected:atPuzzleView:)]) {
+        HKPuzzlePhoto *photo = [self.photos objectAtIndex:sender.tag];
+        [self.puzzleDelegate selected:photo atPuzzleView:self];
+    }
 }
 
 @end

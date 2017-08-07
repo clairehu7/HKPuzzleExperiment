@@ -72,14 +72,14 @@ static NSInteger baseChildVCTag = 100;
     if (self.currnetIndex <= 0) {
         return;
     }
-    [self turnInindex:self.currnetIndex - 1];
+    [self turnTo:self.currnetIndex - 1];
 }
 
 - (void)goRight {
     if (self.currnetIndex >= (self.vcs.count - 1)) {
         return;
     }
-    [self turnInindex:self.currnetIndex + 1];
+    [self turnTo:self.currnetIndex + 1];
 }
 
 #pragma mark - Life Cycle
@@ -126,7 +126,7 @@ static NSInteger baseChildVCTag = 100;
     }
     int widthScale = (oldVC.view.tag < newVC.view.tag)?1:-1;
 
-    newVC.view.frame = CGRectMake(widthScale * self.contentView.frame.size.width, newVC.view.frame.origin.y, newVC.view.frame.size.width, newVC.view.frame.size.height);
+    newVC.view.frame = CGRectMake(widthScale * self.contentView.frame.size.width, newVC.view.frame.origin.y, self.contentView.frame.size.width, self.contentView.frame.size.height);
 
     [self transitionFromViewController:oldVC
                       toViewController:newVC
@@ -149,7 +149,10 @@ static NSInteger baseChildVCTag = 100;
 
 #pragma mark - Public
 
-- (void)turnInindex:(NSUInteger)index {
+- (void)turnTo:(NSUInteger)index {
+    if (index >= self.vcs.count) {
+        return;
+    }
     self.currnetIndex = index;
     [self transitionFromOldViewController:_currentVC
                       toNewViewController:self.vcs[index]];

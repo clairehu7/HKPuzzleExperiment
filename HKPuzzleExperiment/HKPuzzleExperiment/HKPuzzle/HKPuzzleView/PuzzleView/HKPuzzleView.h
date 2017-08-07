@@ -10,10 +10,21 @@
 
 #import "HKPuzzlePhoto.h"
 
+#define IMGPLACEHOLDERCOLOR [UIColor colorFromRGBHex:0xCCCCCC]
+
+@class HKPuzzleView;
+@protocol HKPuzzleViewDelegate <NSObject>
+
+@required
+- (void)selected:(HKPuzzlePhoto *)photo atPuzzleView:(HKPuzzleView *)puzzleView;
+
+@end
+
 @interface HKPuzzleView : UIScrollView
 
 @property (nonatomic, assign) BOOL canEdit;
 @property (nonatomic, strong, setter=updateWith:) NSArray <HKPuzzlePhoto *>*photos;
+@property (nonatomic, weak) id <HKPuzzleViewDelegate> puzzleDelegate;
 
 /**
  显示照片
@@ -22,4 +33,14 @@
 
  */
 - (void)updateWith:(NSArray <HKPuzzlePhoto *>*)photos;
+
+
+
+/**
+ 子类 btn 绑定方法
+
+ @param sender 传入的 btn.tag 要对应相应photo 的 code
+ */
+- (void)photoTUI:(UIButton *)sender;
+
 @end

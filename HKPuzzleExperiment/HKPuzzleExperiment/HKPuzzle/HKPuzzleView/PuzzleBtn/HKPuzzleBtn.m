@@ -35,7 +35,6 @@
 
 - (NSString *)imgNameWithType:(PuzzleViewType)type {
     NSString *name = @"";
-    //TODO:图片图片
     //puzzBtn20 puzzBtn40 puzzBtn41 puzzBtn60 puzzBtn80
     NSString *str = [NSString stringWithFormat:@"%@",@(type)];
     name = [@"puzzBtn" stringByAppendingString:str];
@@ -90,7 +89,6 @@
     if (!_imgView) {
         CGFloat width = self.frame.size.width;
         _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, width, width /80 * 120)];
-        _imgView.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:_imgView];
     }
     return _imgView;
@@ -98,8 +96,11 @@
 
 - (UILabel *)promptLabel {
     if (!_promptLabel) {
-        CGFloat height = 20;
+        CGFloat height = self.frame.size.height - self.imgView.frame.size.height;
         _promptLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height)];
+        _promptLabel.textAlignment = NSTextAlignmentCenter;
+        _promptLabel.textColor = [UIColor grayColor];
+        _promptLabel.font = [UIFont systemFontOfSize:13];
         [self addSubview:_promptLabel];
     }
     return _promptLabel;

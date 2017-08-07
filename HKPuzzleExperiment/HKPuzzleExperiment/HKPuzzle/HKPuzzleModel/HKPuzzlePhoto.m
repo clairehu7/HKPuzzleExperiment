@@ -12,12 +12,7 @@
 @implementation HKPuzzlePhoto
 
 - (NSString *)placeholderImgName {
-    //TODO: 照片占位图
     return @"PuzzlePiecePlaceholder";
-}
-
-+ (BOOL)propertyIsOptional:(NSString *)propertyName {
-    return YES;
 }
 
 @end

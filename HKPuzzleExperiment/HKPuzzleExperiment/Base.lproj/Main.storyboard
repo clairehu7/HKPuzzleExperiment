@@ -30,7 +30,7 @@
                                             <constraint firstAttribute="height" constant="80" id="DJ6-up-zhX"/>
                                             <constraint firstAttribute="width" constant="100" id="jK1-6R-7Ow"/>
                                         </constraints>
-                                        <state key="normal" title="测试界面A"/>
+                                        <state key="normal" title="PuzzleA"/>
                                         <connections>
                                             <action selector="aTUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnX-Fb-6UZ"/>
                                         </connections>
@@ -41,7 +41,7 @@
                                             <constraint firstAttribute="width" constant="100" id="cZR-If-vRL"/>
                                             <constraint firstAttribute="height" constant="80" id="qPk-Cf-wwC"/>
                                         </constraints>
-                                        <state key="normal" title="测试界面 B"/>
+                                        <state key="normal" title="PuzzleB"/>
                                         <connections>
                                             <action selector="bTUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvr-HO-V47"/>
                                         </connections>

@@ -7,6 +7,7 @@
 //
 
 #import "HKPuzzle2ImgsView.h"
+#import "HKMarco.h"
 
 static NSUInteger pieceCount = 2;
 @interface HKPuzzle2ImgsView ()
@@ -27,11 +28,11 @@ static NSUInteger pieceCount = 2;
 
 - (void)commonInit {
     _imgView0 = [UIImageView new];
-    _imgView0.backgroundColor = [UIColor lightGrayColor];
+    _imgView0.backgroundColor = IMGPLACEHOLDERCOLOR;
     [self addSubview:_imgView0];
 
     _imgView1 = [UIImageView new];
-    _imgView1.backgroundColor = [UIColor lightGrayColor];
+    _imgView1.backgroundColor = IMGPLACEHOLDERCOLOR;
 
     [self addSubview:_imgView1];
 }
@@ -41,7 +42,6 @@ static NSUInteger pieceCount = 2;
 }
 
 - (void)loadPhotos {
-
     NSMutableArray *models = [NSMutableArray array];
     for (int i = 0; i < pieceCount; i++) {
         HKPuzzlePhoto *replacePhoto = [HKPuzzlePhoto new];
@@ -49,10 +49,8 @@ static NSUInteger pieceCount = 2;
         [models addObject:replacePhoto];
         [self loadPhotoFrameOf:i];
     }
-
-    self.photos = models.copy;
-
-    //TODO:更新 contentSize
+    [self updateWith:models.copy];
+    [self loadBtns];
 }
 
 - (void)loadPhotoFrameOf:(NSUInteger)code {
@@ -69,9 +67,35 @@ static NSUInteger pieceCount = 2;
         case 1: {
             frame = CGRectMake(0, size.height + ySpace, size.width, size.height);
             _imgView1.frame = frame;
+            self.contentSize = CGSizeMake(size.width, _imgView1.y_max);
             break;
         }
     }
+}
+
+- (void)loadBtns{
+    for (int code = 0; code < pieceCount; code++) {
+        CGRect btnFrame = [self loadBtnOf:code];
+        UIButton *btn0 = [[UIButton alloc]initWithFrame:btnFrame];
+        btn0.tag = code;
+        [btn0 addTarget:self action:@selector(photoTUI:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:btn0];
+    }
+}
+
+- (CGRect)loadBtnOf:(NSUInteger)code {
+    CGRect frame = CGRectZero;
+    switch (code) {
+        case 0: {
+            frame = _imgView0.frame;
+            break;
+        }
+        case 1: {
+            frame = _imgView1.frame;
+            break;
+        }
+    }
+    return frame;
 }
 
 @end

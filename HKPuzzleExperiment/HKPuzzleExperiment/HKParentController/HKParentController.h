@@ -6,13 +6,11 @@
 //  Copyright © 2017年 hky. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HKViewController.h"
 
-#warning HKViewController
-
-@interface HKParentController : UIViewController
+@interface HKParentController : HKViewController
 
 - (void)loadWithVcs:(NSArray <UIViewController *>*)vcs childFrame:(CGRect)frame;
 
-- (void)turnInindex:(NSUInteger)index;
+- (void)turnTo:(NSUInteger)index;
 @end
