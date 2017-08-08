@@ -34,6 +34,8 @@
 		77B223891F374337001A118A /* HKPuzzleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B223811F374337001A118A /* HKPuzzleView.m */; };
 		77B2238A1F374337001A118A /* HKPuzzleViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B223831F374337001A118A /* HKPuzzleViewFactory.m */; };
 		77B2238D1F37434F001A118A /* HKPuzzleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B2238C1F37434F001A118A /* HKPuzzleBtn.m */; };
+		77DC46181F39C65C009DB1FD /* HKClipperHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DC46151F39C65C009DB1FD /* HKClipperHelper.m */; };
+		77DC46191F39C65C009DB1FD /* HKImageClipperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DC46171F39C65C009DB1FD /* HKImageClipperViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,10 @@
 		77B223831F374337001A118A /* HKPuzzleViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKPuzzleViewFactory.m; sourceTree = "<group>"; };
 		77B2238B1F37434F001A118A /* HKPuzzleBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKPuzzleBtn.h; sourceTree = "<group>"; };
 		77B2238C1F37434F001A118A /* HKPuzzleBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKPuzzleBtn.m; sourceTree = "<group>"; };
+		77DC46141F39C65C009DB1FD /* HKClipperHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKClipperHelper.h; sourceTree = "<group>"; };
+		77DC46151F39C65C009DB1FD /* HKClipperHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKClipperHelper.m; sourceTree = "<group>"; };
+		77DC46161F39C65C009DB1FD /* HKImageClipperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKImageClipperViewController.h; sourceTree = "<group>"; };
+		77DC46171F39C65C009DB1FD /* HKImageClipperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKImageClipperViewController.m; sourceTree = "<group>"; };
 		87007B643EB5CA3E4AF25335 /* Pods-HKPuzzleExperiment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKPuzzleExperiment.release.xcconfig"; path = "Pods/Target Support Files/Pods-HKPuzzleExperiment/Pods-HKPuzzleExperiment.release.xcconfig"; sourceTree = "<group>"; };
 		A1F408DA7BA5AEF5FEB1042B /* libPods-HKPuzzleExperiment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HKPuzzleExperiment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +156,7 @@
 		771585991F38728E00675324 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				77DC46131F39C65C009DB1FD /* HKClipperHelper */,
 				771585AF1F389C6700675324 /* HKBaseJSONModel */,
 				771585A81F389BCC00675324 /* HKViewController */,
 				7715859A1F38729300675324 /* HKMarco.h */,
@@ -343,6 +350,17 @@
 				77B2237F1F374337001A118A /* HKPuzzle8ImgsView.m */,
 			);
 			path = PuzzleView;
+			sourceTree = "<group>";
+		};
+		77DC46131F39C65C009DB1FD /* HKClipperHelper */ = {
+			isa = PBXGroup;
+			children = (
+				77DC46141F39C65C009DB1FD /* HKClipperHelper.h */,
+				77DC46151F39C65C009DB1FD /* HKClipperHelper.m */,
+				77DC46161F39C65C009DB1FD /* HKImageClipperViewController.h */,
+				77DC46171F39C65C009DB1FD /* HKImageClipperViewController.m */,
+			);
+			path = HKClipperHelper;
 			sourceTree = "<group>";
 		};
 		D9FD6AEDEF0BA938217D8B45 /* Pods */ = {
@@ -544,6 +562,7 @@
 				77B2238A1F374337001A118A /* HKPuzzleViewFactory.m in Sources */,
 				77B223891F374337001A118A /* HKPuzzleView.m in Sources */,
 				779D53111F36999000E1AFF9 /* ViewController.m in Sources */,
+				77DC46191F39C65C009DB1FD /* HKImageClipperViewController.m in Sources */,
 				77B223521F36FEC6001A118A /* HKPuzzlePhoto.m in Sources */,
 				77B2236E1F372FE3001A118A /* HKPuzzleControllerB.m in Sources */,
 				77B2238D1F37434F001A118A /* HKPuzzleBtn.m in Sources */,
@@ -561,6 +580,7 @@
 				771585A01F3872F700675324 /* UIColor+HKExtends.m in Sources */,
 				771585B21F389C6700675324 /* HKBaseJSONModel.m in Sources */,
 				77B2236C1F372FE3001A118A /* HKPuzzleController.m in Sources */,
+				77DC46181F39C65C009DB1FD /* HKClipperHelper.m in Sources */,
 				779D530B1F36999000E1AFF9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
