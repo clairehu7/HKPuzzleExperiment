@@ -10,6 +10,8 @@
 
 @interface HKParentController : HKViewController
 
+@property (nonatomic, strong, readonly) NSArray <UIViewController *>*vcs;
+
 - (void)loadWithVcs:(NSArray <UIViewController *>*)vcs childFrame:(CGRect)frame;
 
 - (void)turnTo:(NSUInteger)index;

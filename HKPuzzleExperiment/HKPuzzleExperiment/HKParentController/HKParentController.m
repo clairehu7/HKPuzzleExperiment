@@ -12,7 +12,7 @@ static NSInteger baseChildVCTag = 100;
 
 @interface HKParentController ()
 
-@property (nonatomic, strong) NSArray <UIViewController *>*vcs;
+@property (nonatomic, strong, readwrite) NSArray <UIViewController *>*vcs;
 @property (nonatomic, strong) UIViewController  *firstVC;
 @property (nonatomic, strong) UIViewController  *currentVC;
 @property (nonatomic, assign) NSUInteger        currnetIndex;

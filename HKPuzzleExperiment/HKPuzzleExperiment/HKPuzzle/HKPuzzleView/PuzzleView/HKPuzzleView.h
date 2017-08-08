@@ -16,7 +16,7 @@
 @protocol HKPuzzleViewDelegate <NSObject>
 
 @required
-- (void)selected:(HKPuzzlePhoto *)photo atPuzzleView:(HKPuzzleView *)puzzleView;
+- (NSArray <HKPuzzlePhoto *>*)refreshPuzzlePieceAt:(NSUInteger)index;
 
 @end
 

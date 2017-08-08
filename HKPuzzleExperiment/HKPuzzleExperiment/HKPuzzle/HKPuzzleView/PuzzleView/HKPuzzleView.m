@@ -52,9 +52,9 @@
         return;
     }
 
-    if ([self.puzzleDelegate respondsToSelector:@selector(selected:atPuzzleView:)]) {
-        HKPuzzlePhoto *photo = [self.photos objectAtIndex:sender.tag];
-        [self.puzzleDelegate selected:photo atPuzzleView:self];
+    if ([self.puzzleDelegate respondsToSelector:@selector(refreshPuzzlePieceAt:)]) {
+        NSArray *photos =  [self.puzzleDelegate refreshPuzzlePieceAt:sender.tag];
+        [self updateWith:photos];
     }
 }
 

@@ -12,7 +12,7 @@
 
 #import "HKPuzzleControllerB.h"
 
-@interface HKPuzzleControllerB ()
+@interface HKPuzzleControllerB () 
 @property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UIView *bottomView;
 @end
@@ -32,25 +32,22 @@
 
 - (void)commonInit {
     self.title = @"PuzzleB";
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self loadChild];
 }
 
-- (void)loadChild {
-    
+- (CGRect)childFrame {
     CGFloat childHeight = kViewHeight - self.topView.y_max - self.bottomView.height;
 
     CGSize childSize = CGSizeMake(kScWidth - 30, childHeight);
 
-    CGRect childBounds = CGRectMake(0,0, childSize.width, childSize.height);
-
     CGRect childFrame = CGRectMake(15, self.topView.y_max, childSize.width, childSize.height);
-
-    HKPuzzleChildController *vc1 = [[HKPuzzleChildController alloc]initWithType:PuzzleViewType2Imgs contentFrame:childBounds];
-    HKPuzzleChildController *vc2 = [[HKPuzzleChildController alloc]initWithType:PuzzleViewType4ImgsOne contentFrame:childBounds];
-    [self loadWithVcs:@[vc1,vc2] childFrame:childFrame];
-    [self turnTo:0];
+    return childFrame;
 }
+
+- (void)switchTUI:(UIButton *)sender {
+    NSUInteger index = sender.tag;
+    [self turnTo:index];
+}
+
 
 #pragma mark - Setters & Getters
 
@@ -90,11 +87,6 @@
 
     }
     return _topView;
-}
-
-- (void)switchTUI:(UIButton *)sender {
-    NSUInteger index = sender.tag;
-    [self turnTo:index];
 }
 
 - (UIView *)bottomView {

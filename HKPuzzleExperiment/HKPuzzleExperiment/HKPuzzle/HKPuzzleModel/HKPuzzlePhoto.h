@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, assign) NSUInteger code;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
 
 @property (nonatomic, strong) NSString *placeholderImgName;//本地用
 
