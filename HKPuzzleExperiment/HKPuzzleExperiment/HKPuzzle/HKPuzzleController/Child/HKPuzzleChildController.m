@@ -47,12 +47,10 @@
 
 #pragma mark - HKPuzzleViewDelegate
 
-- (NSArray<HKPuzzlePhoto *> *)refreshPuzzlePieceAt:(NSUInteger)index {
+- (void)refreshPuzzlePieceAt:(NSUInteger)index {
     if ([self.puzzleCtlDelegate respondsToSelector:@selector(refreshPuzzlePieceAt:inController:)]) {
-        NSArray *photos = [self.puzzleCtlDelegate refreshPuzzlePieceAt:index inController:self];
-        return photos;
+        [self.puzzleCtlDelegate refreshPuzzlePieceAt:index inController:self];
     }
-    return nil;
 }
 
 @end

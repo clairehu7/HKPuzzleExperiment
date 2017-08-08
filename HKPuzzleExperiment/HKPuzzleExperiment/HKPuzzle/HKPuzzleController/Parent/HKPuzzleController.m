@@ -10,8 +10,9 @@
 
 #import "HKPuzzleController.h"
 #import "HKPuzzleConfiger.h"
+#import "HKClipperHelper.h"
 
-@interface HKPuzzleController ()<HKPuzzleChildControllerDelegate>
+@interface HKPuzzleController ()<UIActionSheetDelegate,HKPuzzleChildControllerDelegate>
 @property (nonatomic, strong) NSMutableDictionary *photosDic;
 @end
 
@@ -58,7 +59,7 @@
 
 #pragma mark - HKPuzzleChildControllerDelegate
 
-- (NSArray<HKPuzzlePhoto *> *)refreshPuzzlePieceAt:(NSUInteger)index inController:(HKPuzzleChildController *)puzzleController {
+- (void)refreshPuzzlePieceAt:(NSUInteger)index inController:(HKPuzzleChildController *)puzzleController {
 
     PuzzleViewType type = puzzleController.type;
     NSString *key = [NSString stringWithFormat:@"%@",@(type)];
@@ -66,9 +67,53 @@
     HKPuzzlePhoto *photo = [photos objectAtIndex:index];
 
     
-#warning 取 photo 的宽高，裁剪后重新装载 photos，赋值并回传
-    NSArray *newPhotos;
-    return photos;
+#warning 取 photo 的宽高，裁剪后重新装载 photos，上传服务端，赋值 url 后回传
+
+    photo.url = @"https://ohwflolko.qnssl.com/FgupZTCDiKjcgs5Z41bAZ--lWVuX";
+    photo.width = 2000;
+    photo.height = 1134;
+
+    [self configHelper];
+
+    NSMutableArray *newPhotos = photos.mutableCopy;
+    [newPhotos setObject:photo atIndexedSubscript:index];
+
+    [puzzleController updateWith:newPhotos.copy];
+}
+
+#pragma mark - HKClipperHelper
+
+- (void)configHelper {
+//    [HKClipperHelper shareManager].nav = self.navigationController;
+//    [HKClipperHelper shareManager].clippedImgSize = self.clippedImageView.frame.size;
+//
+//    __weak typeof(self)weakSelf = self;
+//
+//    [HKClipperHelper shareManager].clippedImageHandler = ^(UIImage *img) {
+//        weakSelf.clippedImageView.image = img;
+//    };
+}
+
+#pragma mark - UIActionSheet
+
+- (void)takePhoto {
+    UIActionSheet *_sheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                        delegate:self
+                                               cancelButtonTitle:@"取消"
+                                          destructiveButtonTitle:nil
+                                               otherButtonTitles:@"拍照", @"相机胶卷", nil];
+    [_sheet showInView:[UIApplication sharedApplication].keyWindow];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    dispatch_after(0., dispatch_get_main_queue(), ^{
+        if (buttonIndex == 0) {
+            [[HKClipperHelper shareManager] photoWithSourceType:UIImagePickerControllerSourceTypeCamera];
+        }
+        else if(buttonIndex == 1) {
+            [[HKClipperHelper shareManager] photoWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        }
+    });
 }
 
 #pragma mark - Setters & Getters

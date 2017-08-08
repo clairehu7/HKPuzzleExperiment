@@ -53,8 +53,7 @@
     }
 
     if ([self.puzzleDelegate respondsToSelector:@selector(refreshPuzzlePieceAt:)]) {
-        NSArray *photos =  [self.puzzleDelegate refreshPuzzlePieceAt:sender.tag];
-        [self updateWith:photos];
+        [self.puzzleDelegate refreshPuzzlePieceAt:sender.tag];
     }
 }
 

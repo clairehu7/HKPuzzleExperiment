@@ -15,7 +15,7 @@
 @protocol HKPuzzleChildControllerDelegate <NSObject>
 
 @required
-- (NSArray <HKPuzzlePhoto *>*)refreshPuzzlePieceAt:(NSUInteger)index inController:(HKPuzzleChildController *)puzzleController;
+- (void)refreshPuzzlePieceAt:(NSUInteger)index inController:(HKPuzzleChildController *)puzzleController;
 
 @end
 
