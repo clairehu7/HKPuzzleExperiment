@@ -29,7 +29,7 @@
 
     //传入照片数与需要的照片数相等时直接赋值返回
     if (self.photos.count == photos.count) {
-        [self updateWith:photos];
+        _photos = photos;
         return;
     }
 
@@ -43,7 +43,7 @@
         [models replaceObjectAtIndex:photo.code withObject:photo];
     }
 
-    [self updateWith:models.copy];
+    _photos = models.copy;
 }
 
 - (void)photoTUI:(UIButton *)sender {

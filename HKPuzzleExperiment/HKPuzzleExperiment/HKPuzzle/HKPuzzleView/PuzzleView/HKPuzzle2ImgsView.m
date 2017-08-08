@@ -9,6 +9,8 @@
 #import "HKPuzzle2ImgsView.h"
 #import "HKMarco.h"
 
+#import <UIImageView+WebCache.h>
+
 static NSUInteger pieceCount = 2;
 @interface HKPuzzle2ImgsView ()
 @property (nonatomic, strong) UIImageView *imgView0;
@@ -28,10 +30,14 @@ static NSUInteger pieceCount = 2;
 
 - (void)commonInit {
     _imgView0 = [UIImageView new];
+    _imgView0.contentMode = UIViewContentModeScaleAspectFill;
     _imgView0.backgroundColor = IMGPLACEHOLDERCOLOR;
+    _imgView0.clipsToBounds = YES;
     [self addSubview:_imgView0];
 
     _imgView1 = [UIImageView new];
+    _imgView1.contentMode = UIViewContentModeScaleAspectFill;
+    _imgView1.clipsToBounds = YES;
     _imgView1.backgroundColor = IMGPLACEHOLDERCOLOR;
 
     [self addSubview:_imgView1];
@@ -39,6 +45,13 @@ static NSUInteger pieceCount = 2;
 
 - (void)updateWith:(NSArray<HKPuzzlePhoto *> *)photos {
     [super updateWith:photos];
+
+    HKPuzzlePhoto *photo0 = [photos objectAtIndex:0];
+    [_imgView0 sd_setImageWithURL:[NSURL URLWithString:photo0.url]];
+
+    HKPuzzlePhoto *photo1 = [photos objectAtIndex:1];
+    [_imgView1 sd_setImageWithURL:[NSURL URLWithString:photo1.url]];
+
 }
 
 - (void)loadPhotos {
@@ -49,7 +62,7 @@ static NSUInteger pieceCount = 2;
         [models addObject:replacePhoto];
         [self loadPhotoFrameOf:i];
     }
-    [self updateWith:models.copy];
+    self.photos = models.copy;
     [self loadBtns];
 }
 

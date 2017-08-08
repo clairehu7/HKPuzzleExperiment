@@ -12,7 +12,7 @@
 #import "HKPuzzleConfiger.h"
 
 @interface HKPuzzleController ()<HKPuzzleChildControllerDelegate>
-@property (nonatomic, strong) NSDictionary *photosDic;
+@property (nonatomic, strong) NSMutableDictionary *photosDic;
 @end
 
 @implementation HKPuzzleController
@@ -33,7 +33,6 @@
 }
 
 - (void)loadPhotosDic:(NSDictionary *)dic {
-    self.photosDic = dic;
     CGRect childFrame = [self childFrame];
     
     CGRect childBounds = CGRectMake(0, 0, childFrame.size.width, childFrame.size.height);
@@ -43,17 +42,19 @@
     for (NSString *key in [dic allKeys]) {
         //dic 的 key 对应了 相应的 PuzzleViewType 模版类型
         PuzzleViewType type = [key intValue];
-        NSArray *photos = [dic objectForKey:key];
-
+        NSArray *photoDics = [dic objectForKey:key];
+        
+        NSArray *photos = [HKPuzzlePhoto arrayOfModelsFromDictionaries:photoDics error:nil].copy;
         HKPuzzleChildController *vc = [[HKPuzzleChildController alloc]initWithType:type photos:photos contentFrame:childBounds];
         vc.puzzleCtlDelegate = self;
         [childVCs addObject:vc];
+
+        [self.photosDic setValue:photos forKey:key];
     }
 
     [self loadWithVcs:childVCs.copy childFrame:childFrame];
     [self turnTo:0];
 }
-
 
 #pragma mark - HKPuzzleChildControllerDelegate
 
@@ -67,7 +68,16 @@
     
 #warning 取 photo 的宽高，裁剪后重新装载 photos，赋值并回传
     NSArray *newPhotos;
-    return newPhotos;
+    return photos;
+}
+
+#pragma mark - Setters & Getters
+
+- (NSMutableDictionary *)photosDic {
+    if (!_photosDic) {
+        _photosDic = [NSMutableDictionary dictionary];
+    }
+    return _photosDic;
 }
 
 @end

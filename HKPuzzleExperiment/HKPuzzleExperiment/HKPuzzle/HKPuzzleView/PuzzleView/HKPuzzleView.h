@@ -23,7 +23,7 @@
 @interface HKPuzzleView : UIScrollView
 
 @property (nonatomic, assign) BOOL canEdit;
-@property (nonatomic, strong, setter=updateWith:) NSArray <HKPuzzlePhoto *>*photos;
+@property (nonatomic, strong) NSArray <HKPuzzlePhoto *>*photos;
 @property (nonatomic, weak) id <HKPuzzleViewDelegate> puzzleDelegate;
 
 /**

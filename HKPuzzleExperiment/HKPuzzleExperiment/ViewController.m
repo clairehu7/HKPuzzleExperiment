@@ -34,47 +34,48 @@
 
 - (IBAction)bTUI:(UIButton *)sender {
     HKPuzzleControllerB *vc = [HKPuzzleControllerB new];
-    [vc loadPhotosDic:@{@"20":@[@{
-                                    @"code":@"0",
-                                    @"url":@"http://img1.sc115.com/uploads/sc/jpg/137/1401.jpg",
-                                    @"width":@"700",
-                                    @"height":@"933"
-                                  },
-                                @{
-                                    @"code":@"",
-                                    @"url":@"http://www.9ly.com.cn/files/2014-3/f20140312174950176392.jpg",
-                                    @"width":@"436",
-                                    @"height":@"500"
-                                    }
-                                ],
+    NSDictionary *dic =  @{@"20":@[@{
+                                       @"code":@(0),
+                                       @"url":@"https://ohwflolko.qnssl.com/Fqq1ITFJa9UB4rlkjThU_9XTmW3R",
+                                       @"width":@(2000),
+                                       @"height":@(1134)
+                                       },
+                                   @{
+                                       @"code":@(1),
+                                       @"url":@"https://ohwflolko.qnssl.com/FtODbwp80FYC237XukdxhV_XyFkr",
+                                       @"width":@(750),
+                                       @"height":@(1125)
+                                       }
+                                   ],
 
-                        @"41":@[@{
-                                    @"code":@"0",
-                                    @"url":@"",
-                                    @"width":@"",
-                                    @"height":@""
-                                    },
-                                @{
-                                    @"code":@"",
-                                    @"url":@"",
-                                    @"width":@"",
-                                    @"height":@""
-                                    },
-                                @{
-                                    @"code":@"0",
-                                    @"url":@"",
-                                    @"width":@"",
-                                    @"height":@""
-                                    },
-                                @{
-                                    @"code":@"",
-                                    @"url":@"",
-                                    @"width":@"",
-                                    @"height":@""
-                                    }
+                           @"41":@[@{
+                                       @"code":@(0),
+                                       @"url":@"https://ohwflolko.qnssl.com/FgupZTCDiKjcgs5Z41bAZ--lWVuX",
+                                       @"width":@(2000),
+                                       @"height":@(1134)
+                                       },
+                                   @{
+                                       @"code":@(1),
+                                       @"url":@"https://ohwflolko.qnssl.com/Fqq1ITFJa9UB4rlkjThU_9XTmW3R",
+                                       @"width":@(2000),
+                                       @"height":@(1134)
+                                       },
+                                   @{
+                                       @"code":@(2),
+                                       @"url":@"",
+                                       @"width":@(0),
+                                       @"height":@(0)
+                                       },
+                                   @{
+                                       @"code":@(3),
+                                       @"url":@"",
+                                       @"width":@(0),
+                                       @"height":@(0)
+                                       }
+                                   
+                                   ]};
 
-                                ]}];
-
+    [vc loadPhotosDic:dic];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
