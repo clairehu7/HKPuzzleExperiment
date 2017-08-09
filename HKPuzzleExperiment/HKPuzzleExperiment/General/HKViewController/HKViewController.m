@@ -23,12 +23,10 @@
     // Do any additional setup after loading the view.
 
     self.hidesBottomBarWhenPushed = YES;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-
 }
 
 - (void)didReceiveMemoryWarning {

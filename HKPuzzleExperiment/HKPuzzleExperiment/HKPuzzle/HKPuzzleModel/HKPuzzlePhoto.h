@@ -15,6 +15,7 @@
 @property (nonatomic, assign) NSUInteger code;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGSize photoSize;
 
 @property (nonatomic, strong) NSString *placeholderImgName;//本地用
 

@@ -15,4 +15,8 @@
     return @"PuzzlePiecePlaceholder";
 }
 
+- (CGSize)photoSize {
+    return CGSizeMake(self.width, self.height);
+}
+
 @end

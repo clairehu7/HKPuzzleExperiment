@@ -11,6 +11,7 @@
 #import "HKPuzzleController.h"
 #import "HKPuzzleConfiger.h"
 #import "HKClipperHelper.h"
+#import "HKMarco.h"
 
 @interface HKPuzzleController ()<UIActionSheetDelegate,HKPuzzleChildControllerDelegate>
 @property (nonatomic, strong) NSMutableDictionary *photosDic;
@@ -66,32 +67,44 @@
     NSArray *photos = [self.photosDic objectForKey:key];
     HKPuzzlePhoto *photo = [photos objectAtIndex:index];
 
+    __weak typeof(puzzleController) weakPuzzleCtl = puzzleController;
+
+    //配置 clipper，裁剪完成后的图片处理
     
-#warning 取 photo 的宽高，裁剪后重新装载 photos，上传服务端，赋值 url 后回传
+    [self configHelperWithNav:self.navigationController
+                      imgSize:photo.photoSize
+                   imgHandler:^(UIImage *img)
+    {
 
-    photo.url = @"https://ohwflolko.qnssl.com/FgupZTCDiKjcgs5Z41bAZ--lWVuX";
-    photo.width = 2000;
-    photo.height = 1134;
+        __strong typeof(puzzleController) strongPuzzleCtl = weakPuzzleCtl;
 
-    [self configHelper];
+#warning 这里 url 是写死的，应该上传服务器得到 url
+        //得到 img 后，上传服务器 获取 photo 的 url
+        photo.url = @"https://ohwflolko.qnssl.com/FgupZTCDiKjcgs5Z41bAZ--lWVuX";
+        photo.width = img.size.width;
+        photo.height = img.size.height;
 
-    NSMutableArray *newPhotos = photos.mutableCopy;
-    [newPhotos setObject:photo atIndexedSubscript:index];
+        NSMutableArray *newPhotos = photos.mutableCopy;
+        [newPhotos setObject:photo atIndexedSubscript:index];
 
-    [puzzleController updateWith:newPhotos.copy];
+        [strongPuzzleCtl updateWith:newPhotos.copy];
+    }];
+
+    //起调 clipper 开始裁剪图片
+    [HKClipperHelper shareManager].clipperType = ClipperTypeImgMove;
+    [HKClipperHelper shareManager].systemEditing = NO;
+    [HKClipperHelper shareManager].isSystemType = NO;
+    [self takePhoto];
 }
 
 #pragma mark - HKClipperHelper
 
-- (void)configHelper {
-//    [HKClipperHelper shareManager].nav = self.navigationController;
-//    [HKClipperHelper shareManager].clippedImgSize = self.clippedImageView.frame.size;
-//
-//    __weak typeof(self)weakSelf = self;
-//
-//    [HKClipperHelper shareManager].clippedImageHandler = ^(UIImage *img) {
-//        weakSelf.clippedImageView.image = img;
-//    };
+- (void)configHelperWithNav:(UINavigationController *)nav
+                    imgSize:(CGSize)size
+                 imgHandler:(void(^)(UIImage *img))handler {
+    [HKClipperHelper shareManager].nav = nav;
+    [HKClipperHelper shareManager].clippedImgSize = size;
+    [HKClipperHelper shareManager].clippedImageHandler = handler;
 }
 
 #pragma mark - UIActionSheet
