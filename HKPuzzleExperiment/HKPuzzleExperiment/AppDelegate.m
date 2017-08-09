@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "HKNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    UIStoryboard *board = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
+
+    ViewController *vc = [board instantiateViewControllerWithIdentifier: @"ViewController"];
+
+    [_window setBackgroundColor:[UIColor whiteColor]];
+    [_window setRootViewController:[[HKNavigationController alloc]initWithRootViewController:vc]];
+    [_window makeKeyAndVisible];
+
     return YES;
 }
 

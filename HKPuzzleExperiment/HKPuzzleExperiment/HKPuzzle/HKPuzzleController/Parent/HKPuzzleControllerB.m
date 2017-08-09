@@ -48,7 +48,6 @@
     [self turnTo:index];
 }
 
-
 #pragma mark - Setters & Getters
 
 - (UIView *)topView {

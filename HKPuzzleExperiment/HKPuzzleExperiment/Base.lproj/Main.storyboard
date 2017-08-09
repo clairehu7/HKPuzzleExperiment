@@ -12,7 +12,7 @@
         <!--HKPuzzle-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -73,7 +73,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Pul-6a-NiO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jl4-Ee-SmX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jl4-Ee-SmX" customClass="HKNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pgz-0Q-OJg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

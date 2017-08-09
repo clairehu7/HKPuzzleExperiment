@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		02395F76A14F0329630B8DAB /* libPods-HKPuzzleExperiment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F408DA7BA5AEF5FEB1042B /* libPods-HKPuzzleExperiment.a */; };
-		7715859D1F3872EE00675324 /* UIView+HKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7715859C1F3872EE00675324 /* UIView+HKExtension.m */; };
-		771585A01F3872F700675324 /* UIColor+HKExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 7715859F1F3872F700675324 /* UIColor+HKExtends.m */; };
 		771585AE1F389BCC00675324 /* HKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771585AC1F389BCC00675324 /* HKViewController.m */; };
 		771585B21F389C6700675324 /* HKBaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 771585B11F389C6700675324 /* HKBaseJSONModel.m */; };
 		779D530B1F36999000E1AFF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D530A1F36999000E1AFF9 /* main.m */; };
@@ -35,6 +33,12 @@
 		77B2238D1F37434F001A118A /* HKPuzzleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B2238C1F37434F001A118A /* HKPuzzleBtn.m */; };
 		77DC46181F39C65C009DB1FD /* HKClipperHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DC46151F39C65C009DB1FD /* HKClipperHelper.m */; };
 		77DC46191F39C65C009DB1FD /* HKImageClipperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DC46171F39C65C009DB1FD /* HKImageClipperViewController.m */; };
+		77E5AB551F3AA35D00F6A0D9 /* HKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5AB541F3AA35D00F6A0D9 /* HKNavigationController.m */; };
+		77E5AB6C1F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5AB631F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.m */; };
+		77E5AB6D1F3AA3B100F6A0D9 /* UIColor+HKExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5AB651F3AA3B100F6A0D9 /* UIColor+HKExtends.m */; };
+		77E5AB6E1F3AA3B100F6A0D9 /* UIImage+HKExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5AB671F3AA3B100F6A0D9 /* UIImage+HKExtends.m */; };
+		77E5AB6F1F3AA3B100F6A0D9 /* UINavigationController+HKExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5AB691F3AA3B100F6A0D9 /* UINavigationController+HKExtends.m */; };
+		77E5AB701F3AA3B100F6A0D9 /* UIView+HKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5AB6B1F3AA3B100F6A0D9 /* UIView+HKExtension.m */; };
 		77FEF6771F39C9F100B2C360 /* HKParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FEF6761F39C9F100B2C360 /* HKParentController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +62,6 @@
 /* Begin PBXFileReference section */
 		623ECCD3AB2FBFD142426AED /* Pods-HKPuzzleExperiment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKPuzzleExperiment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HKPuzzleExperiment/Pods-HKPuzzleExperiment.debug.xcconfig"; sourceTree = "<group>"; };
 		7715859A1F38729300675324 /* HKMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKMarco.h; sourceTree = "<group>"; };
-		7715859B1F3872EE00675324 /* UIView+HKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HKExtension.h"; sourceTree = "<group>"; };
-		7715859C1F3872EE00675324 /* UIView+HKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HKExtension.m"; sourceTree = "<group>"; };
-		7715859E1F3872F700675324 /* UIColor+HKExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HKExtends.h"; sourceTree = "<group>"; };
-		7715859F1F3872F700675324 /* UIColor+HKExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HKExtends.m"; sourceTree = "<group>"; };
 		771585AB1F389BCC00675324 /* HKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKViewController.h; sourceTree = "<group>"; };
 		771585AC1F389BCC00675324 /* HKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKViewController.m; sourceTree = "<group>"; };
 		771585B01F389C6700675324 /* HKBaseJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKBaseJSONModel.h; sourceTree = "<group>"; };
@@ -113,6 +113,18 @@
 		77DC46151F39C65C009DB1FD /* HKClipperHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKClipperHelper.m; sourceTree = "<group>"; };
 		77DC46161F39C65C009DB1FD /* HKImageClipperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKImageClipperViewController.h; sourceTree = "<group>"; };
 		77DC46171F39C65C009DB1FD /* HKImageClipperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKImageClipperViewController.m; sourceTree = "<group>"; };
+		77E5AB531F3AA35D00F6A0D9 /* HKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKNavigationController.h; sourceTree = "<group>"; };
+		77E5AB541F3AA35D00F6A0D9 /* HKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKNavigationController.m; sourceTree = "<group>"; };
+		77E5AB621F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HKExtends.h"; sourceTree = "<group>"; };
+		77E5AB631F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HKExtends.m"; sourceTree = "<group>"; };
+		77E5AB641F3AA3B100F6A0D9 /* UIColor+HKExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HKExtends.h"; sourceTree = "<group>"; };
+		77E5AB651F3AA3B100F6A0D9 /* UIColor+HKExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HKExtends.m"; sourceTree = "<group>"; };
+		77E5AB661F3AA3B100F6A0D9 /* UIImage+HKExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HKExtends.h"; sourceTree = "<group>"; };
+		77E5AB671F3AA3B100F6A0D9 /* UIImage+HKExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HKExtends.m"; sourceTree = "<group>"; };
+		77E5AB681F3AA3B100F6A0D9 /* UINavigationController+HKExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+HKExtends.h"; sourceTree = "<group>"; };
+		77E5AB691F3AA3B100F6A0D9 /* UINavigationController+HKExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+HKExtends.m"; sourceTree = "<group>"; };
+		77E5AB6A1F3AA3B100F6A0D9 /* UIView+HKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HKExtension.h"; sourceTree = "<group>"; };
+		77E5AB6B1F3AA3B100F6A0D9 /* UIView+HKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HKExtension.m"; sourceTree = "<group>"; };
 		77FEF6751F39C9F100B2C360 /* HKParentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKParentController.h; sourceTree = "<group>"; };
 		77FEF6761F39C9F100B2C360 /* HKParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKParentController.m; sourceTree = "<group>"; };
 		87007B643EB5CA3E4AF25335 /* Pods-HKPuzzleExperiment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKPuzzleExperiment.release.xcconfig"; path = "Pods/Target Support Files/Pods-HKPuzzleExperiment/Pods-HKPuzzleExperiment.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,15 +168,13 @@
 		771585991F38728E00675324 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				7715859A1F38729300675324 /* HKMarco.h */,
 				77FEF6741F39C9F100B2C360 /* HKParentController */,
+				771585A81F389BCC00675324 /* HKViewController */,
+				77E5AB521F3AA35D00F6A0D9 /* HKNavigationController */,
+				77E5AB611F3AA3B100F6A0D9 /* HKExtends */,
 				77DC46131F39C65C009DB1FD /* HKClipperHelper */,
 				771585AF1F389C6700675324 /* HKBaseJSONModel */,
-				771585A81F389BCC00675324 /* HKViewController */,
-				7715859A1F38729300675324 /* HKMarco.h */,
-				7715859B1F3872EE00675324 /* UIView+HKExtension.h */,
-				7715859C1F3872EE00675324 /* UIView+HKExtension.m */,
-				7715859E1F3872F700675324 /* UIColor+HKExtends.h */,
-				7715859F1F3872F700675324 /* UIColor+HKExtends.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -352,6 +362,32 @@
 				77DC46171F39C65C009DB1FD /* HKImageClipperViewController.m */,
 			);
 			path = HKClipperHelper;
+			sourceTree = "<group>";
+		};
+		77E5AB521F3AA35D00F6A0D9 /* HKNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				77E5AB531F3AA35D00F6A0D9 /* HKNavigationController.h */,
+				77E5AB541F3AA35D00F6A0D9 /* HKNavigationController.m */,
+			);
+			path = HKNavigationController;
+			sourceTree = "<group>";
+		};
+		77E5AB611F3AA3B100F6A0D9 /* HKExtends */ = {
+			isa = PBXGroup;
+			children = (
+				77E5AB621F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.h */,
+				77E5AB631F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.m */,
+				77E5AB641F3AA3B100F6A0D9 /* UIColor+HKExtends.h */,
+				77E5AB651F3AA3B100F6A0D9 /* UIColor+HKExtends.m */,
+				77E5AB661F3AA3B100F6A0D9 /* UIImage+HKExtends.h */,
+				77E5AB671F3AA3B100F6A0D9 /* UIImage+HKExtends.m */,
+				77E5AB681F3AA3B100F6A0D9 /* UINavigationController+HKExtends.h */,
+				77E5AB691F3AA3B100F6A0D9 /* UINavigationController+HKExtends.m */,
+				77E5AB6A1F3AA3B100F6A0D9 /* UIView+HKExtension.h */,
+				77E5AB6B1F3AA3B100F6A0D9 /* UIView+HKExtension.m */,
+			);
+			path = HKExtends;
 			sourceTree = "<group>";
 		};
 		77FEF6741F39C9F100B2C360 /* HKParentController */ = {
@@ -565,20 +601,24 @@
 				77DC46191F39C65C009DB1FD /* HKImageClipperViewController.m in Sources */,
 				77B223521F36FEC6001A118A /* HKPuzzlePhoto.m in Sources */,
 				77B2236E1F372FE3001A118A /* HKPuzzleControllerB.m in Sources */,
+				77E5AB6E1F3AA3B100F6A0D9 /* UIImage+HKExtends.m in Sources */,
 				77B2238D1F37434F001A118A /* HKPuzzleBtn.m in Sources */,
 				77B223871F374337001A118A /* HKPuzzle6ImgsView.m in Sources */,
 				77B223851F374337001A118A /* HKPuzzle4Imgs1View.m in Sources */,
 				779D530E1F36999000E1AFF9 /* AppDelegate.m in Sources */,
+				77E5AB551F3AA35D00F6A0D9 /* HKNavigationController.m in Sources */,
 				77B223861F374337001A118A /* HKPuzzle4Imgs2View.m in Sources */,
 				77B223841F374337001A118A /* HKPuzzle2ImgsView.m in Sources */,
 				77B223881F374337001A118A /* HKPuzzle8ImgsView.m in Sources */,
+				77E5AB701F3AA3B100F6A0D9 /* UIView+HKExtension.m in Sources */,
+				77E5AB6C1F3AA3B100F6A0D9 /* UIBarButtonItem+HKExtends.m in Sources */,
 				771585AE1F389BCC00675324 /* HKViewController.m in Sources */,
 				77B223711F37300C001A118A /* HKPuzzleChildController.m in Sources */,
 				77FEF6771F39C9F100B2C360 /* HKParentController.m in Sources */,
 				77B2236D1F372FE3001A118A /* HKPuzzleControllerA.m in Sources */,
-				7715859D1F3872EE00675324 /* UIView+HKExtension.m in Sources */,
-				771585A01F3872F700675324 /* UIColor+HKExtends.m in Sources */,
 				771585B21F389C6700675324 /* HKBaseJSONModel.m in Sources */,
+				77E5AB6D1F3AA3B100F6A0D9 /* UIColor+HKExtends.m in Sources */,
+				77E5AB6F1F3AA3B100F6A0D9 /* UINavigationController+HKExtends.m in Sources */,
 				77B2236C1F372FE3001A118A /* HKPuzzleController.m in Sources */,
 				77DC46181F39C65C009DB1FD /* HKClipperHelper.m in Sources */,
 				779D530B1F36999000E1AFF9 /* main.m in Sources */,
